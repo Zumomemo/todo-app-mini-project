@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kanit', sans-serif;
+}
+
+body {
+  /* พื้นหลังไล่สีม่วงอ่อนไปชมพูอ่อน (Soft Lavender to Light Pink) */
+  background: linear-gradient(135deg, #e8dff5 0%, #fce1e4 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 25px rgba(186, 144, 198, 0.2);
+  border: 1px solid #f3d5e4;
+}
+
+h1 {
+  text-align: center;
+  color: #8a5a83; /* สีม่วงเข้มละมุน */
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+/* ฟอร์มและอินพุต */
+form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+input[type="text"], select {
+  padding: 10px 14px;
+  border: 1.5px solid #e2c0d8;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  outline: none;
+  background-color: #faf5f9;
+  color: #5a4b56;
+  transition: all 0.2s ease;
+}
+
+input[type="text"] {
+  flex: 1;
+}
+
+input[type="text"]:focus, select:focus {
+  border-color: #b28dbe;
+  background-color: #ffffff;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.btn-add {
+  background-color: #d19ec5; /* สีชมพู-ม่วงพาสเทล */
+  color: #ffffff;
+}
+
+.btn-add:hover {
+  background-color: #c18bb3;
+}
+
+/* ส่วนตัวกรอง */
+.filter-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e8d0e0;
+  color: #7d6b79;
+  font-size: 0.88rem;
+}
+
+/* รายการข้อความ */
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  background-color: #fcf6fa;
+  border-radius: 14px;
+  border-left: 5px solid #dbb3d1;
+  transition: all 0.2s;
+}
+
+li:hover {
+  background-color: #f8edf5;
+}
+
+.task-title {
+  cursor: pointer;
+  color: #4a3e47;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.task-title.completed {
+  text-decoration: line-through;
+  color: #b5a4b0;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  background-color: #ebdbe6;
+  color: #77526f;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+/* ปุ่มการทำงาน */
+.action-group {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-edit {
+  background-color: #f3c3d3; /* สีชมพูอ่อน */
+  color: #6b3b4d;
+  font-size: 0.8rem;
+  padding: 6px 10px;
+}
+
+.btn-edit:hover {
+  background-color: #e5b0c2;
+}
+
+.btn-del {
+  background-color: #cbb4d5; /* สีม่วงอ่อน */
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding: 6px 10px;
+}
+
+.btn-del:hover {
+  background-color: #b79dc3;
+}

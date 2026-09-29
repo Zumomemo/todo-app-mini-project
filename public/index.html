@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Pastel To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="card">
+    <h1>✨ To-Do List ✨</h1>
+
+    <!-- ฟอร์มเพิ่มข้อมูล -->
+    <form id="task-form">
+      <input type="text" id="title" placeholder="เพิ่มรายการใหม่..." required>
+      <select id="category" required>
+        <option value="study">Study</option>
+        <option value="personal">Personal</option>
+        <option value="work">Work</option>
+      </select>
+      <button type="submit" class="btn-add">เพิ่ม</button>
+    </form>
+
+    <!-- ตัวกรองข้อมูล (Query String) -->
+    <div class="filter-box">
+      <label>หมวดหมู่:</label>
+      <select id="filter-category" onchange="fetchTasks()">
+        <option value="">ทั้งหมด</option>
+        <option value="study">Study</option>
+        <option value="personal">Personal</option>
+        <option value="work">Work</option>
+      </select>
+    </div>
+
+    <!-- รายการแสดงผล -->
+    <ul id="task-list"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
